@@ -9,3 +9,5 @@
 ## Methodology
 
 - The proposed algorithm utilizes a dataset consisting of 20 songs from various genres, each represented by a 15-second EQ wave pattern recording of the intro section. We applied frequency-domain analysis to these recordings to develop a unique EQ sound wave 'fingerprint' for each song. The user's listening frequency for each song was used to train a machine learning model to predict their preference for similar EQ wave patterns.
+![user_input_1](https://github.com/Junho-eum/EQ_based_rec_algorithm/assets/74083204/ecb4b972-23f7-49a6-9093-169252bc9df1)
+![user_input_1](https://github.com/Junho-eum/EQ_based_rec_algorithm/assets/74083204/21e74b06-7df9-49bc-b03e-72f497fe3a88)
