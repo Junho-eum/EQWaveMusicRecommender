@@ -30,15 +30,16 @@ Install the required Python libraries by running pip install PyQt5 python_speech
 
 Clone this repository to your local machine.
 
+
 Place your audio dataset in the ./dataset/ directory. The dataset should be organized into sub-directories for each genre or type of song.
 
-Run the Python script main.py from the root directory of the project.
+Run the Python script run recommendation_algo_multi_input.py.
 
 The application will display a list of all songs available in your dataset.
 
 Double-click on a song from the list to select it. This will be the song that the system will use as a reference for recommendations.
 
-After you have selected a song, click on the 'Exit' button. The system will then begin processing and comparing the selected song against the rest of the dataset.
+After you have selected a songs you like, click on the 'Exit' button. The system will then begin processing and comparing the selected song against the rest of the dataset.
 
 Wait for the processing to complete. The system will then display the song that is most similar to your selected song based on the MFCC features.
 
