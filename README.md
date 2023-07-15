@@ -14,44 +14,46 @@
 
 ## Requirements
 
-Python 3.6 or above
-PyQt5
-python_speech_features
-seaborn
-librosa
-numpy
-fastdtw
-glob
-matplotlib
-An audio dataset in the .mp3 format divided into various genres or types, placed in the ./dataset/ directory
+  ```
+  Python 3.6 or above
+  PyQt5
+  python_speech_features
+  seaborn
+  librosa
+  numpy
+  fastdtw
+  glob
+  matplotlib
+  ```
+
+- An audio dataset in the .mp3 format divided into various genres or types, placed in the ./dataset/ directory
 
 ## Instructions
-Install the required Python libraries by running pip install PyQt5 python_speech_features seaborn librosa numpy fastdtw matplotlib.
-
-Clone this repository to your local machine.
-
-
-Place your audio dataset in the ./dataset/ directory. The dataset should be organized into sub-directories for each genre or type of song.
-
-Run the Python script run recommendation_algo_multi_input.py.
-
-The application will display a list of all songs available in your dataset.
-
-Double-click on a song from the list to select it. This will be the song that the system will use as a reference for recommendations.
-
-After you have selected a songs you like, click on the 'Exit' button. The system will then begin processing and comparing the selected song against the rest of the dataset.
-
-Wait for the processing to complete. The system will then display the song that is most similar to your selected song based on the MFCC features.
+  1. Install the required Python libraries by running pip install PyQt5 python_speech_features seaborn librosa numpy fastdtw matplotlib.
+  
+  2. Clone this repository to your local machine.
+  
+  3. Place your audio dataset in the ./dataset/ directory. The dataset should be organized into sub-directories for each genre or type of song.
+  
+  4. Run the Python script run recommendation_algo_multi_input.py.
+  
+  5. The application will display a list of all songs available in your dataset.
+  
+  6. Double-click on a song from the list to select it. This will be the song that the system will use as a reference for recommendations.
+  
+  7. After you have selected a songs you like, click on the 'Exit' button. The system will then begin processing and comparing the selected song against the rest of the dataset.
+  
+  Wait for the processing to complete. The system will then display the song that is most similar to your selected song based on the MFCC features.
 
 ## How it works
-This system uses MFCCs to convert the audio tracks into a form that can be processed. The FastDTW algorithm is then used to compare the MFCCs of the selected song against the MFCCs of the other songs in the dataset. The song with the smallest distance measure, which indicates the highest similarity to the selected song, is then recommended.
+- This system uses MFCCs to convert the audio tracks into a form that can be processed. The FastDTW algorithm is then used to compare the MFCCs of the selected song against the MFCCs of the other songs in the dataset. The song with the smallest distance measure, which indicates the highest similarity to the selected song, is then recommended.
 
-This application uses PyQt5 to provide a simple GUI for song selection and result display. It uses the librosa library to handle audio file loading and processing.
+- This application uses PyQt5 to provide a simple GUI for song selection and result display. It uses the librosa library to handle audio file loading and processing.
 
 ## Note
-The system currently supports .mp3 format for audio files. Ensure your dataset consists of .mp3 files.
+- The system currently supports .mp3 format for audio files. Ensure your dataset consists of .mp3 files.
 
-This code uses a fixed length for MFCC data padding or truncation. Ensure that the audio tracks in your dataset are compatible with the chosen fixed length. The current fixed length is set to 661500.
+- This code uses a fixed length for MFCC data padding or truncation. Ensure that the audio tracks in your dataset are compatible with the chosen fixed length. The current fixed length is set to 661500.
 ## DTW Algorithm appication (Dynamic Time Warping)
 
 ## Library for K pop recommendation using 15 DTW
