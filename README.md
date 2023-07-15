@@ -12,6 +12,45 @@
 ![user_input_1](https://github.com/Junho-eum/EQ_based_rec_algorithm/assets/74083204/ecb4b972-23f7-49a6-9093-169252bc9df1)
 ![user_input_1](https://github.com/Junho-eum/EQ_based_rec_algorithm/assets/74083204/21e74b06-7df9-49bc-b03e-72f497fe3a88)
 
+## Requirements
+
+Python 3.6 or above
+PyQt5
+python_speech_features
+seaborn
+librosa
+numpy
+fastdtw
+glob
+matplotlib
+An audio dataset in the .mp3 format divided into various genres or types, placed in the ./dataset/ directory
+
+## Instructions
+Install the required Python libraries by running pip install PyQt5 python_speech_features seaborn librosa numpy fastdtw matplotlib.
+
+Clone this repository to your local machine.
+
+Place your audio dataset in the ./dataset/ directory. The dataset should be organized into sub-directories for each genre or type of song.
+
+Run the Python script main.py from the root directory of the project.
+
+The application will display a list of all songs available in your dataset.
+
+Double-click on a song from the list to select it. This will be the song that the system will use as a reference for recommendations.
+
+After you have selected a song, click on the 'Exit' button. The system will then begin processing and comparing the selected song against the rest of the dataset.
+
+Wait for the processing to complete. The system will then display the song that is most similar to your selected song based on the MFCC features.
+
+## How it works
+This system uses MFCCs to convert the audio tracks into a form that can be processed. The FastDTW algorithm is then used to compare the MFCCs of the selected song against the MFCCs of the other songs in the dataset. The song with the smallest distance measure, which indicates the highest similarity to the selected song, is then recommended.
+
+This application uses PyQt5 to provide a simple GUI for song selection and result display. It uses the librosa library to handle audio file loading and processing.
+
+## Note
+The system currently supports .mp3 format for audio files. Ensure your dataset consists of .mp3 files.
+
+This code uses a fixed length for MFCC data padding or truncation. Ensure that the audio tracks in your dataset are compatible with the chosen fixed length. The current fixed length is set to 661500.
 ## DTW Algorithm appication (Dynamic Time Warping)
 
 ## Library for K pop recommendation using 15 DTW
